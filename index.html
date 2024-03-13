@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autofill, max-width, display grid and you</title>
+  </head>
+  <body>
+    <style>
+      main {
+        width: 80vw;
+        border: solid 1px black;
+        & > * {
+          margin: 32px;
+          gap: 8px;
+        }
+      }
+
+      .gridContainer {
+        background-color: red;
+
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .flexContainer {
+        background-color: blue;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .childOuter {
+        background-color: rgba(0, 255, 255, 0.5);
+        border-radius: 24px;
+        border: dashed 1px black;
+        padding: 24px;
+      }
+
+      .childInner {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        max-width: 1600px;
+      }
+
+      .childInner p {
+        border: dashed 1px white;
+      }
+    </style>
+
+    <main>
+      <div class="gridContainer">
+        <div class="childOuter">
+          <div class="childInner">
+            <p>one</p>
+            <p>two</p>
+            <p>three</p>
+            <p>four</p>
+            <p>five</p>
+            <p>six</p>
+            <p>seven</p>
+            <p>eight</p>
+            <p>nine</p>
+            <p>ten</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flexContainer">
+        <div class="childOuter">
+          <div class="childInner">
+            <p>one</p>
+            <p>two</p>
+            <p>three</p>
+            <p>four</p>
+            <p>five</p>
+            <p>six</p>
+            <p>seven</p>
+            <p>eight</p>
+            <p>nine</p>
+            <p>ten</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
