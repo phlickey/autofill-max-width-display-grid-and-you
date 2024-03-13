@@ -12,6 +12,7 @@
         border: solid 1px black;
         & > * {
           margin: 32px;
+          padding: 32px;
           gap: 8px;
         }
       }
@@ -22,6 +23,7 @@
         display: grid;
         grid-template-columns: 1fr;
       }
+
       .flexContainer {
         background-color: blue;
 
@@ -29,14 +31,7 @@
         flex-direction: column;
       }
 
-      .childOuter {
-        background-color: rgba(0, 255, 255, 0.5);
-        border-radius: 24px;
-        border: dashed 1px black;
-        padding: 24px;
-      }
-
-      .childInner {
+      .child {
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
 
@@ -46,43 +41,39 @@
         max-width: 1600px;
       }
 
-      .childInner p {
+      .child p {
         border: dashed 1px white;
       }
     </style>
 
     <main>
       <div class="gridContainer">
-        <div class="childOuter">
-          <div class="childInner">
-            <p>one</p>
-            <p>two</p>
-            <p>three</p>
-            <p>four</p>
-            <p>five</p>
-            <p>six</p>
-            <p>seven</p>
-            <p>eight</p>
-            <p>nine</p>
-            <p>ten</p>
-          </div>
+        <div class="child">
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+          <p>eight</p>
+          <p>nine</p>
+          <p>ten</p>
         </div>
       </div>
 
       <div class="flexContainer">
-        <div class="childOuter">
-          <div class="childInner">
-            <p>one</p>
-            <p>two</p>
-            <p>three</p>
-            <p>four</p>
-            <p>five</p>
-            <p>six</p>
-            <p>seven</p>
-            <p>eight</p>
-            <p>nine</p>
-            <p>ten</p>
-          </div>
+        <div class="child">
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+          <p>eight</p>
+          <p>nine</p>
+          <p>ten</p>
         </div>
       </div>
     </main>
